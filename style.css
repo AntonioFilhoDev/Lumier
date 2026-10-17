@@ -77,3 +77,14 @@ ul li a:hover {
     border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-1px);
 }
+
+ul li a:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ul li a {
+        transition: none;
+    }
+}
