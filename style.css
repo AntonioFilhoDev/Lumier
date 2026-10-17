@@ -3,68 +3,77 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-background: url(./assets/bg-mobile\ \(2\).jpg) no-repeat top center/cover; 
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(18, 12, 14, 0.7), rgba(18, 12, 14, 0.7)),
+        url(./assets/bg-mobile\ \(2\).jpg) no-repeat top center/cover;
 }
 
 body * {
- font-family: 'inter', sans-serif;
- color: white;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
 
-#container{
-    width: 360px;
-    margin: 56px auto 0px;
-    padding: 0 24px;
+#container {
+    width: min(100%, 420px);
+    margin: 0 auto;
+    padding: 24px 20px;
 }
 
-#profile{
+#profile {
     text-align: center;
-    padding: 24px;
+    padding: 28px 24px;
+    background: rgba(20, 14, 18, 0.48);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 #profile img {
-width: 112px;
+    width: 112px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35);
 }
 
 #profile p {
-font-weight: 500;
-line-height: 24px;
-margin-top: 8px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 10px;
+    letter-spacing: 0.04em;
 }
 
-/* links */
 ul {
     list-style: none;
-
     display: flex;
     flex-direction: column;
-    gap: 16px ;
+    gap: 16px;
+    margin-top: 22px;
 }
 
-ul li a{
+ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 16px 24px;
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 12px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-
     text-decoration: none;
     font-weight: 500;
-
-    transition: backgroud 0.2s;
-
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* pseudo-selector */
 ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid white;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
 }
